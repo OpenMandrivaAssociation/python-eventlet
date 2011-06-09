@@ -4,7 +4,7 @@ Version:        0.9.14
 Release:        %mkrel 1
 Summary:        Highly concurrent networking library
 License:        MIT
-Group:          Development/Libraries/Python
+Group:          Development/Python
 URL:            http://eventlet.net
 Source0:        http://pypi.python.org/packages/source/e/eventlet/eventlet-%{version}.tar.gz
 Patch0:         wrap-greenpipe.patch
@@ -24,7 +24,7 @@ io operations appear blocking at the source code level.
 
 %package doc
 Summary:        Documentation for %{name}
-Group:          Development/Libraries/Python
+Group:          Development/Python
 Requires:       %{name} = %{version}-%{release}
 
 %description doc
