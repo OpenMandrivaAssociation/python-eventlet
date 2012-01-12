@@ -1,19 +1,19 @@
 %define module eventlet
 Name:           python-%module
-Version:        0.9.14
+Version:        0.9.16
 Release:        %mkrel 1
 Summary:        Highly concurrent networking library
 License:        MIT
 Group:          Development/Python
 URL:            http://eventlet.net
 Source0:        http://pypi.python.org/packages/source/e/eventlet/eventlet-%{version}.tar.gz
-Patch0:         wrap-greenpipe.patch
 BuildRequires:  python-devel
 Buildrequires:	python-setuptools
 BuildRequires:  python-sphinx
 Buildrequires:	python-greenlet
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Requires:       python-greenlet
+Suggests:		python-pyzmq
 BuildArch:      noarch
 
 %description
@@ -32,7 +32,6 @@ Documentation for the python-eventlet package.
 
 %prep
 %setup -q -n eventlet-%{version}
-%patch0 -p1
 
 %build
 CFLAGS="%{optflags}" python setup.py build
