@@ -53,3 +53,20 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc doc/_build/html examples tests
 
+
+
+%changelog
+* Thu Jan 12 2012 Lev Givon <lev@mandriva.org> 0.9.16-1mdv2011.0
++ Revision: 760422
+- Update to 0.9.16.
+  Remove greenpipe patch (no longer needed).
+  Suggest installation of python-pyzmq.
+
+* Thu Jun 09 2011 Antoine Ginies <aginies@mandriva.com> 0.9.14-1
++ Revision: 683432
+- fix group
+- import python-eventlet
+
+
+* Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.9.14
+- first release for Mandriva
