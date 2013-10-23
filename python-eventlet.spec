@@ -1,7 +1,7 @@
 %define module eventlet
 Name:           python-%module
-Version:        0.9.16
-Release:        %mkrel 1
+Version:        0.13.0
+Release:        1
 Summary:        Highly concurrent networking library
 License:        MIT
 Group:          Development/Python
@@ -11,7 +11,6 @@ BuildRequires:  python-devel
 Buildrequires:	python-setuptools
 BuildRequires:  python-sphinx
 Buildrequires:	python-greenlet
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Requires:       python-greenlet
 Suggests:		python-pyzmq
 BuildArch:      noarch
@@ -41,13 +40,11 @@ popd
 chmod a-x tests/mock.py
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitelib}
+%{__python} setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
 
 %files 
-%defattr(-,root,root)
 %doc AUTHORS LICENSE NEWS README README.twisted
-%{python_sitelib}/*
+%{py_puresitedir}/*
 
 %files doc
 %defattr(-,root,root,-)
@@ -70,3 +67,4 @@ rm -rf $RPM_BUILD_ROOT
 
 * Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.9.14
 - first release for Mandriva
+
