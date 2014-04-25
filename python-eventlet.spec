@@ -1,8 +1,9 @@
 %define module eventlet
 Name:           python-%module
-Version:        0.13.0
+Version:        0.14.0
 Release:        1
 Summary:        Highly concurrent networking library
+
 License:        MIT
 Group:          Development/Python
 URL:            http://eventlet.net
@@ -23,6 +24,7 @@ io operations appear blocking at the source code level.
 
 %package doc
 Summary:        Documentation for %{name}
+
 Group:          Development/Python
 Requires:       %{name} = %{version}-%{release}
 
@@ -40,7 +42,7 @@ popd
 chmod a-x tests/mock.py
 
 %install
-%{__python} setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
+python setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
 
 %files 
 %doc AUTHORS LICENSE NEWS README README.twisted
@@ -52,19 +54,4 @@ chmod a-x tests/mock.py
 
 
 
-%changelog
-* Thu Jan 12 2012 Lev Givon <lev@mandriva.org> 0.9.16-1mdv2011.0
-+ Revision: 760422
-- Update to 0.9.16.
-  Remove greenpipe patch (no longer needed).
-  Suggest installation of python-pyzmq.
-
-* Thu Jun 09 2011 Antoine Ginies <aginies@mandriva.com> 0.9.14-1
-+ Revision: 683432
-- fix group
-- import python-eventlet
-
-
-* Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.9.14
-- first release for Mandriva
 
