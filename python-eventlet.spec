@@ -45,7 +45,7 @@ chmod a-x tests/mock.py
 python setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
 
 %files 
-%doc AUTHORS LICENSE NEWS README README.twisted
+%doc AUTHORS LICENSE NEWS README .twisted
 %{py_puresitedir}/*
 
 %files doc
