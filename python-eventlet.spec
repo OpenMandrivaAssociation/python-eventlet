@@ -1,13 +1,13 @@
 %define module eventlet
 Name:           python-%module
-Version:        0.14.0
-Release:        2
+Version:        0.36.1
+Release:        1
 Summary:        Highly concurrent networking library
 
 License:        MIT
 Group:          Development/Python
-URL:            http://eventlet.net
-Source0:        http://pypi.python.org/packages/source/e/eventlet/eventlet-%{version}.tar.gz
+URL:            https://eventlet.net
+Source0:        https://pypi.python.org/packages/source/e/eventlet/eventlet-%{version}.tar.gz
 BuildRequires:  python-devel
 Buildrequires:	python-setuptools
 BuildRequires:  python-sphinx
@@ -49,4 +49,4 @@ python setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
 %{py_puresitedir}/*
 
 %files doc
-%doc doc/_build/html examples tests
+%doc examples tests
