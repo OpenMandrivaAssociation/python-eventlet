@@ -1,6 +1,6 @@
 %define module eventlet
 Name:           python-%module
-Version:        0.38.0
+Version:        0.39.1
 Release:        1
 Summary:        Highly concurrent networking library
 
