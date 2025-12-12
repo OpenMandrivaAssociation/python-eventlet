@@ -1,7 +1,7 @@
 %define module eventlet
 Name:           python-%module
 Version:        0.40.0
-Release:        1
+Release:        2
 Summary:        Highly concurrent networking library
 
 License:        MIT
