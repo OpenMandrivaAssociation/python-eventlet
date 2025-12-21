@@ -8,6 +8,7 @@ License:        MIT
 Group:          Development/Python
 URL:            https://eventlet.net
 Source0:        https://pypi.python.org/packages/source/e/eventlet/eventlet-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:  python-devel
 Buildrequires:	python-setuptools
 BuildRequires:  python-sphinx
