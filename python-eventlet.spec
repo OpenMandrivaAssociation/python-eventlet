@@ -19,6 +19,7 @@ BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(wheel)
 # For docs
 BuildRequires:	python%{pyver}dist(greenlet)
+BuildRequires:	python%{pyver}dist(dnspython)
 BuildRequires:	python%{pyver}dist(sphinx)
 BuildRequires:	python%{pyver}dist(sphinxcontrib-apidoc)
 BuildRequires:	python%{pyver}dist(pyzmq)
