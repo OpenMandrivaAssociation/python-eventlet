@@ -2,7 +2,7 @@
 
 Name:		python-eventlet
 Version:	0.40.4
-Release:	1
+Release:	2
 Summary:	Highly concurrent networking library
 License:	MIT
 Group:		Development/Python
@@ -47,7 +47,7 @@ CFLAGS="%{optflags}"
 PYTHONPATH="%{buildroot}%{python_sitelib}:${PWD}" \
     sphinx-build -b html doc/source %{buildroot}%{_docdir}/%{name}-doc/html
 # remove .buildinfo and .doctrees
-rm -rf %{buildroot}%{_docdir}/%{name}/html/{.buildinfo,.doctrees}
+rm -rf %{buildroot}%{_docdir}/%{name}-doc/html/{.buildinfo,.doctrees}
 
 
 %files
