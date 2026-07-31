@@ -1,7 +1,7 @@
 %define module eventlet
 
 Name:		python-eventlet
-Version:	0.41.0
+Version:	0.41.1
 Release:	1
 Summary:	Highly concurrent networking library
 License:	MIT
